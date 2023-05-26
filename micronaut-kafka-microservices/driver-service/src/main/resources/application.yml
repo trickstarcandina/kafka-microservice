@@ -1,0 +1,28 @@
+micronaut:
+  application:
+    name: passengerService
+  server:
+    port: 8082
+
+
+kafka:
+  bootstrap:
+    servers: localhost:29092
+
+endpoints:
+  all:
+    enabled: true
+    sensitive: false
+
+netty:
+  default:
+    allocator:
+      max-order: 3
+
+tracing:
+  zipkin:
+    enabled: true
+    http:
+      url: http://localhost:9411
+    sampler:
+      probability: 0.1
